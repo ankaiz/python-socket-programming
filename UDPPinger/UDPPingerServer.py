@@ -11,7 +11,7 @@ serverSocket.bind(('', 12000))
 
 while True:
 	# Generate random number in the range of 0 to 10
-	rand = random.randint(0, 10)
+	rand = random.randint(1, 10)
 	print("[Debug] UDP Server rand: %d"%rand)
 	# Receive the client packet along with the address it is coming from 
 	message, address = serverSocket.recvfrom(1024)
