@@ -4,8 +4,8 @@ import base64
 import ssl
 msg = "\r\n I love computer networks!\r\n\r\n"
 endmsg = "\r\n.\r\n"
-username = "iio051611"
-password = "cdwpngpofwqengcs"
+username = "xxxxxx"
+password = "xxxxxx"
 
 # Choose a mail server (e.g. Google mail server) and call it mailserver
 #mailserver = ("127.0.0.1", 25)#Fill in start   #Fill in end
@@ -63,8 +63,7 @@ while True:
 
 # Send MAIL FROM command and print server response.
 # Fill in start
-#mailFrom = "MAIL FROM: <g11430039@ccu.edu.tw> \r\n"
-mailFrom = "MAIL FROM: <iio051611@gmail.com> \r\n"
+mailFrom = "MAIL FROM: <sender@mail> \r\n"
 clientSocketSSL.send(mailFrom.encode())
 recv2 = clientSocketSSL.recv(1024).decode()
 print("After MAIL FROM command: "+recv2)
@@ -74,8 +73,7 @@ if recv1[:3] != '250':
 
 # Send RCPT TO command and print server response. 
 # Fill in start
-#rcptTo = "RCPT TO: <g11430039@ccu.edu.tw> \r\n"
-rcptTo = "RCPT TO: <iio051611@gmail.com> \r\n"
+rcptTo = "RCPT TO: <recv@mail \r\n"
 clientSocketSSL.send(rcptTo.encode())
 recv3 = clientSocketSSL.recv(1024).decode()
 print("After RCPT TO command: "+recv3)
